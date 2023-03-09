@@ -1,17 +1,17 @@
 {
   "version": "0.2",
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
-  "dictionaries": ["vgv_allowed", "vgv_forbidden"],
+  "dictionaries": ["allowed", "forbidden"],
   "dictionaryDefinitions": [
     {
-      "name": "vgv_allowed",
-      "path": "https://raw.githubusercontent.com/verygoodopensource/very_good_dictionaries/main/allowed.txt",
-      "description": "Allowed VGV Spellings"
+      "name": "allowed",
+      "path": "https://raw.githubusercontent.com/kelvin-273o15/spelling/main/allowed.txt",
+      "description": "Allowed Spellings"
     },
     {
-      "name": "vgv_forbidden",
-      "path": "https://raw.githubusercontent.com/verygoodopensource/very_good_dictionaries/main/forbidden.txt",
-      "description": "Forbidden VGV Spellings"
+      "name": "forbidden",
+      "path": "https://raw.githubusercontent.com/kelvin-273o15/spelling/main/forbidden.txt",
+      "description": "Forbidden Spellings"
     }
   ],
   "useGitignore": true,
