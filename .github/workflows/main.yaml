@@ -15,7 +15,16 @@ on:
 jobs:
   semantic-pull-request:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
-
+  setup-env:
+    name: "Set Up Secrets and ENV Variables"
+    runs-on: ubuntu-latest
+    env:
+      APP_ENV: ${{ secrets.APP_ENV }}
+    steps:
+      - run: |
+          cat <<EOF > .env
+          APP_ENV=$APP_ENV
+          EOF
   build:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
     with:
