@@ -15,12 +15,8 @@ on:
 jobs:
   semantic-pull-request:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
-  setup-env:
-    name: "Set Up Secrets and ENV Variables"
+  set-env-var:
     runs-on: ubuntu-latest
-    # we can either use env or secret here
-    env:
-      APP_ENV: ${{ env.APP_ENV }}
     steps:
       - run: |
           cat <<EOF > .env
