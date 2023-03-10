@@ -38,6 +38,7 @@ jobs:
           flutter pub global activate very_good_cli
           very_good --analytics false
           very_good packages get --recursive
+
       - name: 🚧 Set Secrets and ENV
         # created on https://github.com/kelvin-273o15/paramount-client/settings/secrets/actions
         env:
@@ -46,6 +47,7 @@ jobs:
           cat <<EOF > .env
           APP_ENV=$APP_ENV
           EOF
+
       - name: 🚀 Run Build Runner
         run: flutter pub run build_runner build
 
