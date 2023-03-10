@@ -12,16 +12,16 @@ on:
     branches:
       - main
 
+# created on https://github.com/kelvin-273o15/paramount-client/settings/secrets/actions
+env:
+  APP_ENV: "${{ env.APP_ENV }}"
+  GITHUB_URL: ${{ github.repository }}
 
 jobs:
   semantic-pull-request:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
-  build:
+  flutter-build:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
-    # created on https://github.com/kelvin-273o15/paramount-client/settings/secrets/actions
-    secrets:
-      APP_ENV: "${{ secrets.APP_ENV }}"
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     with:
       coverage_excludes: "*.g.dart"
       flutter_channel: "stable"
@@ -30,11 +30,10 @@ jobs:
       setup: |
           cat <<EOF > .env
           APP_ENV=$APP_ENV
-          GITHUB_TOKEN=$GIHUB_TOKEN
+          GITHUB_URL=$GIHUB_URL
           EOF
           cat .env
           flutter pub run build_runner build
-
   spell-check:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/spell_check.yml@v1
     with:
