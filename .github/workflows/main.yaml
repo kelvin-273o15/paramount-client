@@ -43,7 +43,7 @@ jobs:
         # created on https://github.com/kelvin-273o15/paramount-client/settings/secrets/actions
         env:
           APP_ENV: ${{ secrets.APP_ENV }}
-          APP_LOCAL: ${{ env.APP_ENV }}
+          APP_LOCAL: ${{ vars.APP_ENV }}
         run: |
           cat <<EOF > .env
           APP_ENV=$APP_ENV
