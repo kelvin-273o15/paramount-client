@@ -12,16 +12,16 @@ on:
     branches:
       - main
 
+# use env var on setup
+# created on https://github.com/kelvin-273o15/paramount-client/settings/secrets/actions
+env:
+  APP_ENV: ${{ env.APP_ENV }}
+
 jobs:
   semantic-pull-request:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
   build:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
-    # use env var on setup
-    secrets:
-      # created on https://github.com/kelvin-273o15/paramount-client/settings/secrets/actions
-      # either use env.{KEY} or secret.{KEY}
-      APP_ENV: ${{ env.APP_ENV }}
     with:
       coverage_excludes: "*.g.dart"
       flutter_channel: "stable"
@@ -31,6 +31,7 @@ jobs:
           cat <<EOF > .env
           APP_ENV=$APP_ENV
           EOF
+          cat .env
           flutter pub run build_runner build
 
   spell-check:
