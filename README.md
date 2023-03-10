@@ -1,5 +1,6 @@
 # Paramount Petroleum Mobile App
 
+[![Codemagic build status](https://api.codemagic.io/apps/640a51e16d467a62ed0ba98b/640a51e16d467a62ed0ba98a/status_badge.svg)](https://codemagic.io/apps/640a51e16d467a62ed0ba98b/640a51e16d467a62ed0ba98a/latest_build)
 ![coverage][coverage_badge]
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![License: MIT][license_badge]][license_link]
