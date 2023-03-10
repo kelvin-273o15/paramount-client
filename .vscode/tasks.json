@@ -1,0 +1,125 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
+				"pub",
+				"run",
+				"build_runner",
+				"build",
+                "--delete-conflicting-outputs"
+			],
+			"problemMatcher": [
+				"$dart-build_runner"
+			],
+			"group": "none",
+			"label": "flutter code generate",
+			"detail": ""
+		},
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
+				"pub",
+				"run",
+				"build_runner",
+				"watch",
+                "--delete-conflicting-outputs"
+			],
+			"problemMatcher": [
+				"$dart-build_runner"
+			],
+			"group": "none",
+			"label": "flutter code watcher",
+			"detail": ""
+		},
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
+				"build",
+				"apk",
+                "--release",
+                "--flavor=production",
+                "--target=lib/main_production.dart",
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"label": "flutter build android app",
+			"detail": ""
+		},
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
+				"build",
+                "ios",
+                "--release",
+                "--no-codesign",
+                "--flavor=production",
+                "--target=lib/main_production.dart",
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"label": "flutter build ios",
+			"detail": ""
+		},
+		{
+			"type": "flutter",
+            "group":  "test",
+			"command": "flutter",
+			"args": [
+				"test",
+				"--coverage",
+				"--test-randomize-ordering-seed=random",
+			],
+			"label": "Run All Unit Tests with Coverage",
+			"detail": "This will run all the unit tests and generate a coverage report"
+		},
+		{
+			"type": "shell",
+			"command": "open",
+			"args": [
+				"coverage/index.html"
+			],
+			"group": "test",
+			"label": "Open Coverage Report",
+			"detail": "opens the coverage report in the browser after running the tests"
+		},
+        {
+            "type": "shell",
+            "command": "chromedriver --port=4444",
+            "group": "test",
+            "label": "chromedriver",
+            "detail": "required to be run before any integration test"
+        },
+		{
+			"type": "flutter",
+            "group":  "test",
+			"command": "flutter",
+			"args": [
+				"driver",
+				"--driver=test_driver/integration_driver.dart",
+				"--target=integration_test/app_test.dart",
+                "-d chrome"
+			],
+			"label": "Integration test with Chrome",
+			"detail": "uses chromedriver to run the test on chrome browser"
+		},
+        {
+			"type": "flutter",
+            "group":  "test",
+			"command": "flutter",
+			"args": [
+				"driver",
+				"--driver=test_driver/integration_driver.dart",
+				"--target=integration_test/app_test.dart",
+                "-d web-server"
+			],
+			"label": "Headless Integration test",
+			"detail": "uses headless chrome to run the test"
+		}
+	]
+}

@@ -11,19 +11,62 @@ on:
   pull_request:
     branches:
       - main
-
 jobs:
   semantic-pull-request:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
-
-  build:
-    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
-    with:
-      flutter_channel: stable
-
   spell-check:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/spell_check.yml@v1
     with:
       includes: |
         **/*.md
       modified_files_only: false
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📚 Git Checkout
+        uses: actions/checkout@v3
+
+      - name: 🐦 Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.7.7
+          cache: true
+
+      - name: 📦 Install Dependencies
+        run: |
+          flutter pub global activate very_good_cli
+          very_good --analytics false
+          very_good packages get --recursive
+
+      - name: ☢️ Set Secrets and ENV
+        # created on https://github.com/kelvin-273o15/paramount-client/settings/secrets/actions
+        # to access it use: `secrets.` or `vars.`
+        env:
+          APP_ENV: ${{ secrets.APP_ENV }}
+          APP_LOCAL: ${{ vars.APP_ENV }}
+        # if on windows should use $env:{KEY} insteaed of ${KEY}
+        run: |
+          cat <<EOF > .env
+          APP_ENV=$APP_ENV
+          APP_LOCAL=$APP_LOCAL
+          EOF
+          cat .env
+
+      - name: 🚀 Run Build Runner
+        run: flutter pub run build_runner build
+
+      - name: ✨ Check Formatting
+        run: dart format --set-exit-if-changed lib test
+
+      - name: 🕵️ Analyze
+        run: flutter analyze lib test
+
+      - name: 🧪 Run Tests
+        run: very_good test -j 4 --recursive --optimization --coverage --test-randomize-ordering-seed random
+
+      - name: 📊 Check Code Coverage
+        uses: VeryGoodOpenSource/very_good_coverage@v2
+        with:
+          path: ./coverage/lcov.info
+          min_coverage: 100
