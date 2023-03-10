@@ -22,9 +22,10 @@ jobs:
       flutter_channel: "stable"
       flutter_version: "3.7.7"
       test_recursion: true
+      # use env. or secret.
       setup: |
           cat <<EOF > .env
-          APP_ENV=$APP_ENV
+          APP_ENV=${{ env.APP_ENV }}
           EOF
           flutter pub run build_runner build
 
