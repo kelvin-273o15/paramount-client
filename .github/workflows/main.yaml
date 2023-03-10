@@ -18,8 +18,9 @@ jobs:
   setup-env:
     name: "Set Up Secrets and ENV Variables"
     runs-on: ubuntu-latest
+    # we can either use env or secret here
     env:
-      APP_ENV: ${{ secrets.APP_ENV }}
+      APP_ENV: ${{ env.APP_ENV }}
     steps:
       - run: |
           cat <<EOF > .env
