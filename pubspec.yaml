@@ -8,6 +8,7 @@ environment:
 
 dependencies:
   bloc: ^8.1.1
+  envied: ^0.3.0
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.2
@@ -17,6 +18,8 @@ dependencies:
 
 dev_dependencies:
   bloc_test: ^9.1.1
+  build_runner: ^2.3.3
+  envied_generator: ^0.3.0
   flutter_test:
     sdk: flutter
   integration_test:
