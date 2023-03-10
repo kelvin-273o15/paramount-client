@@ -42,11 +42,12 @@ jobs:
       - name: 🚧 Set Secrets and ENV
         # created on https://github.com/kelvin-273o15/paramount-client/settings/secrets/actions
         env:
-          APP_ENV: ${{ env.APP_ENV }}
+          APP_ENV: ${{ secret.APP_ENV }}
         run: |
           cat <<EOF > .env
           APP_ENV=$APP_ENV
           EOF
+          cat .env
 
       - name: 🚀 Run Build Runner
         run: flutter pub run build_runner build
