@@ -41,9 +41,11 @@ jobs:
 
       - name: 🚧 Set Secrets and ENV
         # created on https://github.com/kelvin-273o15/paramount-client/settings/secrets/actions
+        # to access it use: `secrets.` or `vars.`
         env:
           APP_ENV: ${{ secrets.APP_ENV }}
           APP_LOCAL: ${{ vars.APP_ENV }}
+        # if on windows should use $env:{KEY} insteaed of ${KEY}
         run: |
           cat <<EOF > .env
           APP_ENV=$APP_ENV
