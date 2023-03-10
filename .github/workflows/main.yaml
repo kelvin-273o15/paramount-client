@@ -39,7 +39,7 @@ jobs:
           very_good --analytics false
           very_good packages get --recursive
 
-      - name: 🚧 Set Secrets and ENV
+      - name: ☢️ Set Secrets and ENV
         # created on https://github.com/kelvin-273o15/paramount-client/settings/secrets/actions
         # to access it use: `secrets.` or `vars.`
         env:
