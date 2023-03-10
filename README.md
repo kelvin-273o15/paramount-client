@@ -14,7 +14,7 @@ Rewards can be exchanged for stuff like fuel, coffee, discount coupon, cash.
 
 ---
 
-## Getting Started 🚀
+## Getting Started 🚀🚀🚀
 
 This project contains 3 flavors:
 
