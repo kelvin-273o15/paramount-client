@@ -15,13 +15,6 @@ on:
 jobs:
   semantic-pull-request:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
-  set-env-var:
-    runs-on: ubuntu-latest
-    steps:
-      - run: |
-          cat <<EOF > .env
-          APP_ENV=$APP_ENV
-          EOF
   build:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
     with:
@@ -29,7 +22,11 @@ jobs:
       flutter_channel: "stable"
       flutter_version: "3.7.7"
       test_recursion: true
-      setup: "flutter pub run build_runner build"
+      setup: |
+          cat <<EOF > .env
+          APP_ENV=$APP_ENV
+          EOF
+          flutter pub run build_runner build
 
   spell-check:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/spell_check.yml@v1
