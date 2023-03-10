@@ -20,7 +20,7 @@ jobs:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
     # created on https://github.com/kelvin-273o15/paramount-client/settings/secrets/actions
     secrets:
-      APP_ENV: "${{ env.APP_ENV }}"
+      APP_ENV: "${{ secrets.APP_ENV }}"
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     with:
       coverage_excludes: "*.g.dart"
