@@ -46,13 +46,14 @@ jobs:
           cat <<EOF > .env
           APP_ENV=$APP_ENV
           EOF
-      - run: flutter pub run build_runner build
+      - name: Run Build Runner
+        run: flutter pub run build_runner build
 
       - name: ✨ Check Formatting
         run: dart format --set-exit-if-changed lib test
 
       - name: 🕵️ Analyze
-        run: flutter analyze ${{inputs.analyze_directories}}
+        run: flutter analyze lib test
 
       - name: 🧪 Run Tests
         run: very_good test -j 4 --recursive --optimization --coverage --test-randomize-ordering-seed random
