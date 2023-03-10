@@ -15,7 +15,8 @@ on:
 # use env var on setup
 # created on https://github.com/kelvin-273o15/paramount-client/settings/secrets/actions
 env:
-  APP_ENV: ${{ env.APP_ENV }}
+  APP_ENV: ${{ secret.APP_ENV }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   semantic-pull-request:
@@ -30,6 +31,7 @@ jobs:
       setup: |
           cat <<EOF > .env
           APP_ENV=$APP_ENV
+          GITHUB_TOKEN=$GIHUB_TOKEN
           EOF
           cat .env
           flutter pub run build_runner build
