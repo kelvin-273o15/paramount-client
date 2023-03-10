@@ -115,6 +115,8 @@ app.*.map.json
 
 # Env
 .env
+.env.*
+!.env.example
 env.g.dart
 
 # Exceptions to the above rules.
