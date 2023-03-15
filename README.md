@@ -17,32 +17,32 @@ Note: choose `Region` closest to you and `Machine Type`
 
 `2 core machine` would lasts `120` hrs for `FREE`
 
-1. Install dependencies
+2. Install dependencies
 
  Press <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> then type "Tasks: Run Tasks" , then press <kbd>ENTER</kbd> , type `flutter pub get`
 
  Also if you get prompted to install plugins recommended just accept it , it would make your life easier.
 
-1. generate .env
+3. generate .env
 
 Press <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> then type "Tasks: Run Tasks" , then press <kbd>ENTER</kbd> , type `Generate Env File` or `flutter code watcher`
 
-1. Update .env config as needed
+4. Update .env config as needed
 
 ```sh
 APP_ENV=local
 //! More TBA
 ```
 
-1. Generate Code using build runner
+5. Generate Code using build runner
 
 Press <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> then type "Tasks: Run Tasks" , then press <kbd>ENTER</kbd> , type `flutter code generate` or `flutter code watcher`
 
-1. run flutter
+6. run flutter
 
 Press <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> then type "Tasks: Run Tasks" , then press <kbd>ENTER</kbd> , type `Launch on Web`
 
-1. [Open Forwarded Port URL on Browser](https://docs.github.com/en/codespaces/developing-in-codespaces/forwarding-ports-in-your-codespace)
+7. [Open Forwarded Port URL on Browser](https://docs.github.com/en/codespaces/developing-in-codespaces/forwarding-ports-in-your-codespace)
 
 ## Spelling Issues
 Submit PR on this [Spelling Repo](https://github.com/kelvin-273o15/spelling)
