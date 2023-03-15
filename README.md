@@ -44,7 +44,8 @@ Press <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> then type "Tasks: Run Tasks" 
 
 1. [Open Forwarded Port URL on Browser](https://docs.github.com/en/codespaces/developing-in-codespaces/forwarding-ports-in-your-codespace)
 
-
+## Spelling Issues
+Submit PR on this [Spelling Repo](https://github.com/kelvin-273o15/spelling)
 
 
 [coverage_badge]: coverage_badge.svg
