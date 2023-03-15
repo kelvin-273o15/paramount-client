@@ -127,6 +127,7 @@ env.g.dart
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
 !.vscode/extensions.json
+!.vscode/devcontainer-settings.json
 !.vscode/launch.json
 !.vscode/tasks.json
 !.idea/codeStyles/

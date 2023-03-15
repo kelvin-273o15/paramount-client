@@ -1,21 +1,23 @@
 {
-    "dart.sdkPath": "/sdks/flutter/bin/cache/dart-sdk",
-    "dart.flutterSdkPath": "/sdks/flutter",
-    "[dart]": {
+  "dart.sdkPath": "/sdks/flutter/bin/cache/dart-sdk",
+  "dart.flutterSdkPath": "/sdks/flutter",
+  "[dart]": {
       "editor.formatOnSave": true,
       "editor.formatOnType": true,
       "editor.rulers": [
-        80
+          80
       ],
       "editor.tabSize": 2,
       "editor.selectionHighlight": false,
       "editor.quickSuggestions": {
-        "comments": "on",
-        "strings": "on",
-        "other": "on"
+          "comments": "on",
+          "strings": "on",
+          "other": "on"
       },
+      "editor.suggest.snippetsPreventQuickSuggestions": false,
       "editor.suggestSelection": "recentlyUsed",
       "editor.tabCompletion": "on",
+      "editor.wordBasedSuggestions": false,
       "editor.suggestOnTriggerCharacters": true,
       "editor.acceptSuggestionOnEnter": "smart",
       "editor.suggest.showSnippets": false,
@@ -25,37 +27,36 @@
       "editor.autoSurround": "languageDefined",
       "editor.suggest.filterGraceful": true,
       "editor.codeActionsOnSave": {
-        "source.fixAll": true,
-        "source.organizeImports": true,
-        "addMissingImports": true
+          "source.fixAll": true,
+          "source.organizeImports": true,
+          "addMissingImports": true
       },
       "files.insertFinalNewline": true
-    },
-    "dart.normalizeFileCasing": true,
-
-    "dart.openDevTools": "flutter",
-    "dart.showSkippedTests": true,
-    "dart.renameFilesWithClasses": "always",
-    "dart.warnWhenEditingFilesInPubCache": true,
-    "flutterStylizer": {
+  },
+  "dart.normalizeFileCasing": true,
+  "dart.openDevTools": "flutter",
+  "dart.showSkippedTests": true,
+  "dart.renameFilesWithClasses": "always",
+  "dart.warnWhenEditingFilesInPubCache": true,
+  "flutterStylizer": {
       "groupAndSortGetterMethods": false,
       "memberOrdering": [
-        "public-instance-variables",
-        "private-static-variables",
-        "public-constructor",
-        "named-constructors",
-        "public-static-variables",
-        "public-override-variables",
-        "private-instance-variables",
-        "public-override-methods",
-        "public-other-methods",
-        "private-other-methods",
-        "build-method"
+          "public-instance-variables",
+          "private-static-variables",
+          "public-constructor",
+          "named-constructors",
+          "public-static-variables",
+          "public-override-variables",
+          "private-instance-variables",
+          "public-override-methods",
+          "public-other-methods",
+          "private-other-methods",
+          "build-method"
       ],
       "sortOtherMethods": false
-    },
-    "files.defaultLanguage": "dart",
-    "files.exclude": {
+  },
+  "files.defaultLanguage": "dart",
+  "files.exclude": {
       "**.dart_tool": true,
       "**.idea": true,
       "**/*.g.dart": true,
@@ -64,8 +65,8 @@
       "**/*.sql": true,
       "**/*.bak": true,
       "**/*.cache": true
-    },
-    "search.exclude": {
+  },
+  "search.exclude": {
       ".flutter-plugins": true,
       ".flutter-plugins-dependencies": true,
       ".gitignore": true,
@@ -77,5 +78,6 @@
       "debug.log": true,
       "android/**": false,
       "pubspec.lock": true
-    }
-  }
+  },
+  "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨"
+}
