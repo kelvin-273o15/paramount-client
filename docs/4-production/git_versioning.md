@@ -45,7 +45,7 @@ this would allow you to invoke google-play cli
 
 Note: you need to add the script below on `flutter build appbundle --release`
 
-on codemagic you dont need to add the command of flutter just this command will do
+on codemagic you don't need to add the command of flutter just this command will do
 
 ```
 --build-number=$(($(google-play get-latest-build-number --package-name 'com.example.app') + 1))

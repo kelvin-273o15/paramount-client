@@ -2,7 +2,7 @@
 
 > Using Envied makes our ENV secure on production
 
-1. go to your project folder run command `cd PROJECTFOLDER`
+1. go to your project folder run command `cd PROJECT_FOLDER`
 
 1. create .env or copy .env.example with command `cp .env.example .env`
 

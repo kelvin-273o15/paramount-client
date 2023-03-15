@@ -18,12 +18,12 @@ export GCLOUD_SERVICE_ACCOUNT_CREDENTIALS=`cat /Users/uriah/.config/appstore-con
 ```
 
 
-## Adding Encypted Key on Codemagic
+## Adding Encrypted Key on Codemagic
 
-note: dont encrypt it with base64 when copying, the encryption will happen on Codemagic Ui Editor but if we are doing it on the codemagic.yaml we need to `base64` encode it
+note: don't encrypt it with base64 when copying, the encryption will happen on Codemagic Ui Editor but if we are doing it on the codemagic.yaml we need to `base64` encode it
 
 
-> Encypting SECRETS
+> Encrypting SECRETS
 
 On linux:
 ```sh

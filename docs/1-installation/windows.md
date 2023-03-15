@@ -47,7 +47,7 @@ run the command `fvm use` if prompted for options choose [flutter_version]
 
 ## Changing Flutter SDK Version
 
-Note:You need to have dart and flutter vscode extension enable to do this, if you dont please install it first
+Note:You need to have dart and flutter vscode extension enable to do this, if you don't please install it first
 
 1. Press `ctrl+shift+p` to trigger show all commands  then type `flutter change sdk` press enter then choose flutter version [flutter_version]
 

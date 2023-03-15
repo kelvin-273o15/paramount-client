@@ -2,7 +2,7 @@ import 'package:envied/envied.dart';
 
 part 'env.g.dart';
 
-/// to overrided .env file path use `path` parameter
+/// to override .env file path use `path` parameter
 ///
 /// `varName` is defined in the `.env` file
 /// ie: `APP_ENV=local`

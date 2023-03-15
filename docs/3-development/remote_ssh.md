@@ -7,7 +7,7 @@
 
 ~/.zshenv
 
-add sdkroot, and make ruby gems non sudo so we dont face any issue on cli
+add sdkroot, and make ruby gems non sudo so we don't face any issue on cli
 
 ```
 export SDKROOT=$(xcrun -sdk macosx --show-sdk-path)
@@ -61,7 +61,7 @@ uriah(my user on macos that I added for remote login , if that started with capi
 Note: you need to login with your MacOS user password if prompted
 
 ## Remote SSH from your windows to your MacOS machine
-Rmote-SSH Connect to Host
+Remote-SSH Connect to Host
 Choose your Host
 Select Platform (Macos) (Important)
 Type in your user on Mac password
@@ -70,7 +70,7 @@ Type in your user on Mac password
 on the dashboard of vscode , Open Folder
 Search or type the path of your Project
 and then Press OK
-i.e. /Users/uriah/Code/Flutter/watchcrunch
+i.e. /Users/uriah/Code/REPO
 
 ## Connect your Android device on a Usb
 adb devices (check if device is detected if not we need to do the following)

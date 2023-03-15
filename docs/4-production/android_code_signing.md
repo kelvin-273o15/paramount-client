@@ -5,7 +5,7 @@ https://docs.flutter.dev/deployment/android
 - Prior Development We only use debug.store key
 this file is located usually at `/Users/uriah/.android/debug.keystore`
 
-# Code Signining for Production
+# Code Signing for Production
 > Note: there are two types of keys the one we will generate here is the upload Key this is used when uploading to Google PlayStore
 
 Important: Save the Key to a safe location
@@ -16,10 +16,10 @@ keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize 2048 -va
 Note: -alias `upload` can be of any name but for naming convention it is usually `upload`
 
 # Create new File
-`${PROJECTFOLDER}`/`android/key.properties`
+`${PROJECT_FOLDER}`/`android/key.properties`
 ```
-storePassword=ENTERSTOREPASSWORDHERE
-keyPassword=ENTERKEYPASSWORDHERE
+storePassword=ENTER_STORE_PASSWORD_HERE
+keyPassword=ENTER_KEY_PASSWORD_HERE
 keyAlias=upload
 storeFile=/Users/YOURUSERNAME/upload-keystore.jks
 ```

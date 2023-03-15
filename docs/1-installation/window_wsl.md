@@ -47,7 +47,7 @@ adb connect 192.168.100.143
 adb connect 192.168.100.143:5555
 ```
 
-if you face Anauthorized Error, Assuming you done step 2
+if you face Unauthorized Error, Assuming you done step 2
 run this command
 
 ```

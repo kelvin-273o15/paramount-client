@@ -2,7 +2,7 @@
 
 ## Install dart with brew
 
-If you dont have brew installed , please refer to the guide on [brew.sh](http://brew.sh)
+If you don't have brew installed , please refer to the guide on [brew.sh](http://brew.sh)
 
 run command: `brew install dart`
 
@@ -58,7 +58,7 @@ run the command `fvm use` if prompted for options choose [flutter_version]
 
 ## Changing Flutter SDK Version
 
-Note:You need to have dart and flutter vscode extension enable to do this, if you dont please install it first
+Note:You need to have dart and flutter vscode extension enable to do this, if you don't please install it first
 
 1. Press `cmd+shift+p` to trigger show all commands  then type `flutter change sdk` press enter then choose flutter version [flutter_version]
 
@@ -66,11 +66,11 @@ Note: if for some reason flutter sdk [flutter_version] is not listed we can crea
 
 ```json
 {
-  "dart.flutterSdkPath": "/Users/MACUSERNAME/fvm/versions/3.7.7"
+  "dart.flutterSdkPath": "/Users/MAC_USERNAME/fvm/versions/3.7.7"
 }
 ```
 
-Please change the path accordingly to your User path , dont use mine :)
+Please change the path accordingly to your User path , don't use mine :)
 
 
 [flutter_version]: ../flutter_version.md

@@ -2,7 +2,7 @@
 
 > Find a way to connect to your device with adb...
 
-- This is good if your on mac and you dont have extra resources to spin up an emulator and run android studio
+- This is good if your on mac and you don't have extra resources to spin up an emulator and run android studio
 
 ## Requirements
 - VSCode
@@ -36,7 +36,7 @@ Note: Adb is installed together with android studio or the android cli or with s
 
 1. Go to [Github Codespace]( https://github.com/codespaces)
 1. Click New Code Space Button
-1. Choose watchcrunch fluttter repository
+1. Choose repository
 1. Open the code in vscode
 1. Wait for it to finish provisioning the Github Codespace
 1. CMD+SHIFT+P(mac) or CTRL+SHIFT+P(pc) then type `Dart: Change SDK` select current
@@ -124,10 +124,10 @@ open `lib/env.dart` and update it using your expose url
 
 ```
 static const String apiUrl = String.fromEnvironment('API_URL',
-      defaultValue: 'https://watchcrunch.sharedwithexpose.com');
+      defaultValue: 'https://app.example.com');
 
 static const String apiDomain = String.fromEnvironment('API_DOMAIN',
-      defaultValue: 'https://watchcrunch.sharedwithexpose.com');
+      defaultValue: 'https://app.example.com');
 ```
 
 ## Run Flutter
