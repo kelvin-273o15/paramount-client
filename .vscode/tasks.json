@@ -147,30 +147,11 @@
             "detail": "required to be run before any integration test"
         },
 		{
-			"type": "flutter",
-            "group":  "test",
-			"command": "flutter",
-			"args": [
-				"driver",
-				"--driver=test_driver/integration_driver.dart",
-				"--target=integration_test/app_test.dart",
-                "-d chrome"
-			],
-			"label": "Integration test with Chrome",
-			"detail": "uses chromedriver to run the test on chrome browser"
-		},
-        {
-			"type": "flutter",
-            "group":  "test",
-			"command": "flutter",
-			"args": [
-				"driver",
-				"--driver=test_driver/integration_driver.dart",
-				"--target=integration_test/app_test.dart",
-                "-d web-server"
-			],
-			"label": "Headless Integration test",
-			"detail": "uses headless chrome to run the test"
-		}
+            "type": "shell",
+            "command": "flutter drive --driver=test_driver/integration_test.dart --target=integration_test/app_test.dart -d chrome",
+            "group": "test",
+            "label": "Integration Test",
+            "detail": "needed chromedriver to be run before any integration test"
+        }
 	]
 }

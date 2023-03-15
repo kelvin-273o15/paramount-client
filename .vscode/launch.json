@@ -4,19 +4,49 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
-    //! read ./docs/development/codespace.md
     {
-      "name": "Codespace Debug(Android)",
+      "name": "Debug(iOS)",
       "request": "launch",
       "type": "dart",
-      //! 192.168.1.6:5555 -> use IP:port instead of Device ID
-      "deviceId": "",
+      "deviceId": "00008110-0015249E14DB801E",
       "flutterMode": "debug",
+      "program": " lib/main_development.dart",
       "args": [
         "--flavor",
         "development",
         "--target",
-        "lib/main_development.dart"
+        "lib/main_development.dart",
+      ]
+    },
+    //! read ./docs/development/codespace.md
+    //! Still not possible to connect with codespace port forwarding
+    //! Docker Container or Wireless Device
+    {
+      "name": "Debug(Android) Wireless",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "192.168.1.6:5555",
+      "flutterMode": "debug",
+      "program": " lib/main_development.dart",
+      "args": [
+        "--flavor",
+        "development",
+        "--target",
+        "lib/main_development.dart",
+      ]
+    },
+    {
+      "name": "Debug(Android) USB",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "DUM7N19327003847",
+      "flutterMode": "debug",
+      "program": " lib/main_development.dart",
+      "args": [
+        "--flavor",
+        "development",
+        "--target",
+        "lib/main_development.dart",
       ]
     },
     {
