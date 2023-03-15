@@ -26,7 +26,7 @@ Install this flutter version using command: `fvm install` [flutter_version]
 
 ## Clone The Repo over SSH
 
-run command: `git clone git@SSH_USERNAME.github.com:GITUSERNAME/REPO.git app`
+run command: `git clone git@SSH_USERNAME.github.com:GIT_USERNAME/REPO.git app`
 
 Note: SSH_USERNAME is set up on ssh config, you can replace SSH_USERNAME base on your config
 

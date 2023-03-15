@@ -12,7 +12,7 @@ wsl
 1. Git Clone the repo
 
 ```sh
-git clone git@SSH_USESRNAME.github.com:GITUSERNAME/REPO.git app
+git clone git@SSH_USESRNAME.github.com:GIT_USERNAME/REPO.git app
 ```
 
 1. open App folder in vscode , press CMD/CTRL + SHIFT + P  then type `Open Folder in Container`

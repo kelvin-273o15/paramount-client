@@ -21,7 +21,7 @@ Note: -alias `upload` can be of any name but for naming convention it is usually
 storePassword=ENTER_STORE_PASSWORD_HERE
 keyPassword=ENTER_KEY_PASSWORD_HERE
 keyAlias=upload
-storeFile=/Users/YOURUSERNAME/upload-keystore.jks
+storeFile=/Users/YOUR_USERNAME/upload-keystore.jks
 ```
 
 > In event you have many keystore file and your CI/CD is failing, the SHA1 hash will be shown on error to check the key SHA1
