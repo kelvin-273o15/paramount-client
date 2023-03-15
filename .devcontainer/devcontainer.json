@@ -3,7 +3,7 @@
 	"image": "cirrusci/flutter:3.7.7",
     "forwardPorts": [3000],
 	"features": {
-		"sshd": "latest"
+		"ghcr.io/devcontainers/features/sshd:1": {}
 	},
 	"customizations": {
 		"vscode": {
