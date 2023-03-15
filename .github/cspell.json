@@ -1,7 +1,10 @@
 {
   "version": "0.2",
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
-  "dictionaries": ["allowed", "forbidden"],
+  "dictionaries": [
+    "allowed",
+    "forbidden"
+  ],
   "dictionaryDefinitions": [
     {
       "name": "allowed",
@@ -15,6 +18,16 @@
     }
   ],
   "useGitignore": true,
+  "ignorePaths": [
+    "**/ios/**",
+    "**/android/**",
+    "**/.vscode/**",
+    "**/.devcontainer/**",
+    "**/.idea/**",
+    "**/node_modules/**",
+    "**/build/**",
+    "**/coverage/**"
+  ],
   "words": [
     "Contador",
     "localizable",
