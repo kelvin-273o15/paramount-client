@@ -2,6 +2,9 @@
 	"name": "Flutter CI",
 	"image": "cirrusci/flutter:3.7.7",
     "forwardPorts": [3000],
+	"features": {
+		"sshd": "latest"
+	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
