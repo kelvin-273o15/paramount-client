@@ -4,7 +4,7 @@
 ![coverage][coverage_badge]
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![License: MIT][license_badge]][license_link]
-[![mobile](https://github.com/kelvin-273o15/paramount-client/actions/workflows/main.yaml/badge.svg)](https://github.com/kelvin-273o15/paramount-client/actions/workflows/main.yaml)
+[![mobile](https://github.com/kelvin-273o15/paramount-client/actions/workflows/main.yaml/badge.svg?branch=main)](https://github.com/kelvin-273o15/paramount-client/actions/workflows/main.yaml)
 
 
 ---
