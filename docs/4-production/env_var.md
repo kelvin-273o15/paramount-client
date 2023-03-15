@@ -1,4 +1,4 @@
-# Setting Up ENV on CodeMagic
+# [Setting Up ENV on CodeMagic](https://docs.codemagic.io/yaml-basic-configuration/configuring-environment-variables/)
 
 
 ## Local Development
