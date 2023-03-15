@@ -1,167 +1,53 @@
-# Paramount Petroleum Mobile App
+# Paramount Mobile App
 
 [![Codemagic build status](https://api.codemagic.io/apps/640a51e16d467a62ed0ba98b/640a51e16d467a62ed0ba98a/status_badge.svg)](https://codemagic.io/apps/640a51e16d467a62ed0ba98b/640a51e16d467a62ed0ba98a/latest_build)
 ![coverage][coverage_badge]
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![License: MIT][license_badge]][license_link]
+[![mobile](https://github.com/kelvin-273o15/paramount-client/actions/workflows/main.yaml/badge.svg)](https://github.com/kelvin-273o15/paramount-client/actions/workflows/main.yaml)
 
-
-Buy a small piece of Fuel Station Franchise,
-Every Month That Station mint Token and Distribute to Stake Holders.
-
-Reward Users for buying gas on that fuel station.
-Or By Watching/Viewing Ads from our Partners/Sponsors
-Rewards can be exchanged for stuff like fuel, coffee, discount coupon, cash.
 
 ---
 
-## Getting Started 🚀
+## Getting Started on Github Codespace
 
-This project contains 3 flavors:
+1. Create new [Github Codespace](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=611750319)
 
-- development
-- staging
-- production
+Note: choose `Region` closest to you and `Machine Type`
 
-To run the desired flavor either use the launch configuration in VSCode/Android Studio or use the following commands:
+`2 core machine` would lasts `120` hrs for `FREE`
 
-```sh
-# Development
-$ flutter run --flavor development --target lib/main_development.dart
+1. Install dependencies
 
-# Staging
-$ flutter run --flavor staging --target lib/main_staging.dart
+ Press <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> then type "Tasks: Run Tasks" , then press <kbd>ENTER</kbd> , type `flutter pub get`
 
-# Production
-$ flutter run --flavor production --target lib/main_production.dart
-```
+ Also if you get prompted to install plugins recommended just accept it , it would make your life easier.
 
-_\*Mobile works on iOS, Android, Web, and Windows._
+1. generate .env
 
----
+Press <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> then type "Tasks: Run Tasks" , then press <kbd>ENTER</kbd> , type `Generate Env File` or `flutter code watcher`
 
-## Running Tests 🧪
-
-To run all unit and widget tests use the following command:
+1. Update .env config as needed
 
 ```sh
-$ flutter test --coverage --test-randomize-ordering-seed random
+APP_ENV=local
+//! More TBA
 ```
 
-To view the generated coverage report you can use [lcov](https://github.com/linux-test-project/lcov).
+1. Generate Code using build runner
 
-```sh
-# Generate Coverage Report
-$ genhtml coverage/lcov.info -o coverage/
+Press <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> then type "Tasks: Run Tasks" , then press <kbd>ENTER</kbd> , type `flutter code generate` or `flutter code watcher`
 
-# Open Coverage Report
-$ open coverage/index.html
-```
+1. run flutter
 
----
+Press <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> then type "Tasks: Run Tasks" , then press <kbd>ENTER</kbd> , type `Launch on Web`
 
-## Working with Translations 🌐
+1. [Open Forwarded Port URL on Browser](https://docs.github.com/en/codespaces/developing-in-codespaces/forwarding-ports-in-your-codespace)
 
-This project relies on [flutter_localizations][flutter_localizations_link] and follows the [official internationalization guide for Flutter][internationalization_link].
 
-### Adding Strings
 
-1. To add a new localizable string, open the `app_en.arb` file at `lib/l10n/arb/app_en.arb`.
-
-```arb
-{
-    "@@locale": "en",
-    "counterAppBarTitle": "Counter",
-    "@counterAppBarTitle": {
-        "description": "Text shown in the AppBar of the Counter Page"
-    }
-}
-```
-
-2. Then add a new key/value and description
-
-```arb
-{
-    "@@locale": "en",
-    "counterAppBarTitle": "Counter",
-    "@counterAppBarTitle": {
-        "description": "Text shown in the AppBar of the Counter Page"
-    },
-    "helloWorld": "Hello World",
-    "@helloWorld": {
-        "description": "Hello World Text"
-    }
-}
-```
-
-3. Use the new string
-
-```dart
-import 'package:mobile/l10n/l10n.dart';
-
-@override
-Widget build(BuildContext context) {
-  final l10n = context.l10n;
-  return Text(l10n.helloWorld);
-}
-```
-
-### Adding Supported Locales
-
-Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info.plist` to include the new locale.
-
-```xml
-    ...
-
-    <key>CFBundleLocalizations</key>
-	<array>
-		<string>en</string>
-		<string>es</string>
-	</array>
-
-    ...
-```
-
-### Adding Translations
-
-1. For each supported locale, add a new ARB file in `lib/l10n/arb`.
-
-```
-├── l10n
-│   ├── arb
-│   │   ├── app_en.arb
-│   │   └── app_es.arb
-```
-
-2. Add the translated strings to each `.arb` file:
-
-`app_en.arb`
-
-```arb
-{
-    "@@locale": "en",
-    "counterAppBarTitle": "Counter",
-    "@counterAppBarTitle": {
-        "description": "Text shown in the AppBar of the Counter Page"
-    }
-}
-```
-
-`app_es.arb`
-
-```arb
-{
-    "@@locale": "es",
-    "counterAppBarTitle": "Contador",
-    "@counterAppBarTitle": {
-        "description": "Texto mostrado en la AppBar de la página del contador"
-    }
-}
-```
 
 [coverage_badge]: coverage_badge.svg
-[flutter_localizations_link]: https://api.flutter.dev/flutter/flutter_localizations/flutter_localizations-library.html
-[internationalization_link]: https://flutter.dev/docs/development/accessibility-and-localization/internationalization
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [license_link]: https://opensource.org/licenses/MIT
 [very_good_analysis_badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
