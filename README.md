@@ -1,4 +1,4 @@
-# Paramount Mobile App
+# Paramount Client App
 
 [![Codemagic build status](https://api.codemagic.io/apps/640a51e16d467a62ed0ba98b/640a51e16d467a62ed0ba98a/status_badge.svg)](https://codemagic.io/apps/640a51e16d467a62ed0ba98b/640a51e16d467a62ed0ba98a/latest_build)
 ![coverage][coverage_badge]
