@@ -1,5 +1,4 @@
 {
-    "dotenv.enableAutocloaking": false,
     "[dart]": {
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
