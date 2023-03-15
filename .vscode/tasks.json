@@ -5,6 +5,41 @@
 			"type": "flutter",
 			"command": "flutter",
 			"args": [
+				"clean"
+			],
+			"problemMatcher": [],
+			"group": "none",
+			"label": "flutter clean",
+			"detail": ""
+		},
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
+				"pub",
+				"get"
+			],
+			"problemMatcher": [],
+			"group": "none",
+			"label": "flutter pub get",
+			"detail": ""
+		},
+		{
+			"type": "shell",
+			"command": "cp",
+			"args": [
+				".env.example",
+				".env"
+			],
+			"problemMatcher": [],
+			"group": "none",
+			"label": "Generate Env file",
+			"detail": ""
+		},
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
 				"pub",
 				"run",
 				"build_runner",
@@ -34,6 +69,22 @@
 			"group": "none",
 			"label": "flutter code watcher",
 			"detail": ""
+		},
+		{
+			"type": "flutter",
+			"command": "flutter",
+			"args": [
+				"run",
+				"-d",
+				"web-server",
+				"--web-hostname=0.0.0.0",
+				"--web-port=3000",
+				"-t",
+				"lib/main_development.dart"
+			],
+			"group": "none",
+			"label": "Launch on Web",
+			"detail": "Run Flutter App on Browser"
 		},
 		{
 			"type": "flutter",
