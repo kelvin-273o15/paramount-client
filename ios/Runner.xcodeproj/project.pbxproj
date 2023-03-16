@@ -172,7 +172,7 @@
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					97C146ED1CF9000F007C117D = {
-						Createdon'toolsVersion = 7.3.1;
+						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 1100;
 					};
 				};
